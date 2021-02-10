@@ -1,0 +1,19 @@
+<template>
+    <template if:true={loaded}>
+        <lightning-datatable
+                key-field="Id"
+                data={prod}
+                columns={columnsList}
+                selected-rows={selectedRows}
+                onrowselection={rowSelect}
+        >
+        </lightning-datatable>
+    
+    </template>
+    <template if:false={loaded}>
+        <lightning-spinner
+        variant="brand"
+        size="large">
+    </lightning-spinner>
+    </template>
+</template>
